@@ -1,0 +1,7 @@
+IMPORTANT COMMANDS 
+--Right out of the gate: npm install --save express morgan body-parser
+
+On app.js - entry point, you:
+1. Set up the Middlewares
+2. Set up the Routes
+3. Call the server
