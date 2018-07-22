@@ -54,7 +54,10 @@ module.exports = {
 
     secret: async(req, res, next) => {
         //expecting token generated from passport
-        
+        console.log('I am authorized to be here...');
+        res.status(200).json({
+            secret: "resource"
+        });
 
     }
 }
