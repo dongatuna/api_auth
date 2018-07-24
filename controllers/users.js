@@ -35,11 +35,7 @@ module.exports = {
         });
 
         await newUser.save();
-        
-
-        //console.log(newUser);
-
-
+      
         //Generate the token using the signToken function above
         const token = signToken(newUser);
         //Respond with a token
@@ -48,7 +44,10 @@ module.exports = {
 
     signIn: async(req, res, next) => {
         //expecting email and password from user
-        
+
+        //Generate token
+        const token = signToken(req.user);
+        res.status(200).json({token});
 
     },
 
